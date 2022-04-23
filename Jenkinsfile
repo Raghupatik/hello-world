@@ -1,18 +1,24 @@
 pipeline {
-   agent {label 'java'}
+   agent any
 
-  stages {
+  stages ('CI') {
     stage('Checkout') {
       steps {
         echo 'Checkout'
-        checkout scm
       }
     }
 
     stage('Build') {
       steps {
         // script
-        sh 'mvn clean install'
+        echo ' Build'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        // script
+        echo ' Test'
       }
     }
   }
