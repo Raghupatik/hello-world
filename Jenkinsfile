@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'java'}
 
-    stages('CI1') {
+    stages('CI') {
        stage(''){
             steps {
                 echo "Checkout"
