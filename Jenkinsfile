@@ -2,12 +2,6 @@ pipeline {
    agent any
 
   stages {
-    stage('Checkout') {
-      steps {
-        echo 'Checkout'
-        checkout scm
-      }
-    }
 
     stage('Build') {
       steps {
@@ -18,7 +12,7 @@ pipeline {
      
      stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonarqube-server') {
+                withSonarQubeEnv('sonar') {
                   sh 'mvn sonar:sonar'
                 }
             }
