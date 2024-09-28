@@ -1,0 +1,24 @@
+pipeline{
+    agent any 
+     stages('CI') {
+         stage('checkout'){
+            steps{
+            echo 'Checkout'
+        }
+
+        stage('Build'){
+            steps{
+            //script 
+            echo 'checkout'
+        }
+
+        stage('Test'){
+            steps{
+            //script 
+            echo 'checkout'
+        }
+
+        
+        }
+    }
+}
